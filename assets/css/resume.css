@@ -71,17 +71,42 @@ hr{ border: 0; border-top: 2px solid var(--rule); margin: 16px 0; }
   font-size: 18px;
 }
 
-/* Definition list (kramdown) для строк с ":" */
+/* Definition lists = "колонки" через ":" в markdown */
 dl{
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  justify-content: center;
+  gap: 12px;
+  align-items: baseline;
   margin: 6px 0 12px;
-  color: var(--muted);
+  padding: 0;
 }
-dt{ display: none; }
-dd{ margin: 0; }
+
+dl dt,
+dl dd{
+  margin: 0;
+}
+
+/* Левая колонка */
+dl dt{
+  flex: 1;
+}
+
+/* Средние колонки растягиваются */
+dl dd:not(:last-child){
+  flex: 1;
+}
+
+/* Правая колонка прижимается вправо */
+dl dd:last-child{
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Разделители между колонками в шапке/строках */
+dl dd:not(:last-child)::after{
+  content: " | ";
+  opacity: .7;
+  margin-left: 10px;
+}
 
 /* Небольшой футер */
 .footer{
