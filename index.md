@@ -11,7 +11,8 @@ layout: resume
  : <span class="iconify" data-icon="ic:outline-location-on"></span> Location: Tel-Aviv, IL
 
 ## Summary
-DevOps engineer with hands-on experience in **Linux**, **containerization**, **networking**, **CI/CD**, and **observability**. Built and operated Docker-based services, automated scheduled workloads, and implemented **monitoring/alerting**. Passionate about automation and building reliable systems. 
+DevOps engineer with hands-on experience in **Linux**, **containerization**, **networking**, **CI/CD**, and **observability**. 
+Built and operated Docker-based services, automated scheduled workloads, and implemented **monitoring/alerting**. Passionate about automation and building reliable systems. 
 
 ## Experience
 **Automation Engineer**
