@@ -7,16 +7,16 @@ layout: resume
 # Yinon Mitin - DevOps
 
 <span class="iconify" data-icon="tabler:mail"></span> [yinon.mitin@gmail.com](mailto:yinon.mitin@gmail.com)
-	: <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
-	: <span class="iconify" data-icon="ic:outline-location-on"></span> Location: Tel-Aviv, IL
+ : <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
+ : <span class="iconify" data-icon="ic:outline-location-on"></span> Location: Tel-Aviv, IL
 
 ## Summary
 DevOps engineer with hands-on experience in **Linux**, **containerization**, **networking**, **CI/CD**, and **observability**. Built and operated Docker-based services, automated scheduled workloads, and implemented **monitoring/alerting**. Passionate about automation and building reliable systems. 
 
 ## Experience
 **Automation Engineer**
-	: Padani Jewelers (e-com)
-	: (2022-2026)
+ : Padani Jewelers (e-com)
+ : (2022-2026)
 - Drove the Magento -> Shopify **data migration** for 500+ SKUs by automating data processing and batch import workflows; reduced end-to-end catalog deployment time by **~60%**.
 - Built and maintained an automated Python-based **ETL pipeline** to extract, normalize and transform product data into Shopify-ready imports (Matrixify-compatible); reduced manual effort and import failures by improving data quality via schema validation.
 - Automated bulk asset collection via custom-built scrapper for product imagery collection from vendor/brand websites, enforcing naming rules and SKU-level mappings, and assembling packages for bulk upload.
