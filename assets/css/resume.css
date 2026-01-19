@@ -101,13 +101,6 @@ dl dd:last-child{
   white-space: nowrap;
 }
 
-/* Разделители между колонками в шапке/строках */
-dl dd:not(:last-child)::after{
-  content: " | ";
-  opacity: .7;
-  margin-left: 10px;
-}
-
 /* Небольшой футер */
 .footer{
   margin-top: 18px;
