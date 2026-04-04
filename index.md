@@ -5,7 +5,7 @@ layout: resume
 ---
 
 # Yinon Mitin
-### **Linux | Docker | Networking | VPN | DNS | Observability | CI/CD**
+###### **Linux | Docker | Networking | VPN | DNS | Observability | CI/CD**
 
 <span class="iconify" data-icon="tabler:mail"></span> [yinon.mitin@gmail.com](mailto:yinon.mitin@gmail.com)
 	: <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
