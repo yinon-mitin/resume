@@ -1,21 +1,36 @@
+/* Resume CSS for GitHub Pages (adapted from junian backbone CSS) */
+
+/* ===== Base / Page ===== */
+
 :root{
-  --page-w: 900px;         /* экранная ширина "листа" */
+  --page-w: 900px;
+  --bg: #f3f4f6;
   --text: #111;
   --muted: #444;
-  --rule: #222;
-  --bg: #f3f4f6;
+  --rule: darkgrey;
+  --accent: #377BB5;
 }
 
-* { box-sizing: border-box; }
+*{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
 body{
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  text-align: left;
+
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
   font: 15px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 .page{
-  max-width: var(--page-w);
+  width: min(var(--page-w), 100%);
   margin: 28px auto;
   padding: 34px 40px;
   background: #fff;
@@ -23,105 +38,245 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,.12);
 }
 
-/* Заголовок */
-h1{
-  margin: 0 0 10px 0;
-  font-size: 44px;
-  line-height: 1.05;
-  text-align: center;
-  letter-spacing: .5px;
-}
-
-h2{
-  margin: 18px 0 8px;
-  font-size: 18px;
-  text-transform: none;
-  font-weight: 800;
-}
-
-h2::after{
-  content: "";
-  display: block;
-  border-top: 2px solid var(--rule);
-  margin-top: 6px;
-}
-
-h3{
-  margin: 14px 0 6px;
-  font-size: 16px;
-  font-weight: 800;
-}
-
-p{ margin: 8px 0; color: var(--text); }
-a{ color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.25); }
-a:hover{ border-bottom-color: rgba(0,0,0,.6); }
-
-ul{
-  margin: 6px 0 0 0;
-  padding-left: 18px;
-}
-li{ margin: 6px 0; }
-
-hr{ border: 0; border-top: 2px solid var(--rule); margin: 16px 0; }
-
-/* Иконки */
-.iconify{
-  vertical-align: -0.15em;
-  margin-right: 6px;
-  font-size: 18px;
-}
-
-/* Definition lists = "колонки" через ":" в markdown */
-dl{
-  display: flex;
-  gap: 12px;
-  align-items: baseline;
-  margin: 6px 0 12px;
-  padding: 0;
-}
-
-dl dt,
-dl dd{
+/* Remove default margins where markdown tends to add them */
+.page p,
+.page li,
+.page dl{
   margin: 0;
 }
 
-/* Левая колонка */
-dl dt{
-  flex: 1;
+.page a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+}
+.page a:hover{
+  border-bottom-color: rgba(0,0,0,.6);
 }
 
-/* Средние колонки растягиваются */
-dl dd:not(:last-child){
-  flex: 1;
+/* ===== Headings ===== */
+
+.page h1,
+.page h2,
+.page h3{
+  font-weight: 700;
 }
 
-/* Правая колонка прижимается вправо */
-dl dd:last-child{
-  text-align: right;
+.page h1{
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 0 0.15em 0;
+}
+
+.page h6{
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+
+.page h2,
+.page h3{
+  margin: 1.0em 0 0.25em 0;
+  font-size: 1.2em;
+}
+
+/* Section headings (like junian) */
+.page h2{
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+
+/* ===== Lists ===== */
+
+.page ul,
+.page ol{
+  padding-left: 1.5em;
+  margin: 0.2em 0 0.8em 0;
+}
+
+.page ul{ list-style-type: disc; }
+.page ol{ list-style-type: decimal; }
+
+/* ===== Reset definition lists ===== */
+
+.page dl,
+.page dt,
+.page dd{
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Header contacts row (first dl under .page) ===== */
+/* Expected structure: <dl><dt>email</dt><dd>linkedin</dd><dd>location</dd></dl> */
+.page > dl:first-of-type{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 2px 0;
+  gap: 8px;
+}
+
+.page > dl:first-of-type dt,
+.page > dl:first-of-type dd{
   white-space: nowrap;
 }
 
-/* Небольшой футер */
+.page > dl:first-of-type dt{
+  text-align: left;
+  justify-self: start;
+}
+
+.page > dl:first-of-type dd:nth-of-type(1){
+  text-align: center;
+  justify-self: center;
+}
+
+.page > dl:first-of-type dd:nth-of-type(2){
+  text-align: right;
+  justify-self: end;
+}
+
+/* ===== Experience row: Role | Company | Dates ===== */
+/* Applies to the dl that comes right after the "Experience" h2.
+   Also keeps compatibility if you have an <hr> between. */
+.page h2 + dl,
+.page h2 + hr + dl{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: baseline;
+  width: 100%;
+  margin: 0 0 6px 0;
+  gap: 8px;
+}
+
+.page h2 + dl dt,
+.page h2 + hr + dl dt{
+  text-align: left;
+  justify-self: start;
+  font-weight: 700;
+}
+
+.page h2 + dl dd:nth-of-type(1),
+.page h2 + hr + dl dd:nth-of-type(1){
+  text-align: center;
+  justify-self: center;
+}
+
+.page h2 + dl dd:nth-of-type(2),
+.page h2 + hr + dl dd:nth-of-type(2){
+  text-align: right;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+/* ===== Icons / Images ===== */
+
+.page svg.iconify{
+  vertical-align: -0.2em;
+}
+
+.page img{
+  max-width: 100%;
+}
+
+/* ===== Footer button (если ты добавляешь "Download PDF") ===== */
+
 .footer{
   margin-top: 18px;
   display: flex;
   justify-content: center;
-  opacity: .8;
+  opacity: .9;
 }
+
 .footer .pdf{
   border: 1px solid rgba(0,0,0,.2);
   padding: 8px 12px;
   border-radius: 10px;
+  background: #fff;
 }
 
-@media print{
-  body{ background:#fff; }
+/* ===== Page break helper ===== */
+.pagebreak{
+  page-break-after: always;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 600px){
+  body{ font-size: 14px; }
+
   .page{
     margin: 0;
-    max-width: none;
+    padding: 18px 16px;
     border-radius: 0;
     box-shadow: none;
-    padding: 0;
   }
+
+  .page h1{
+    font-size: clamp(28px, 8vw, 40px);
+    letter-spacing: 0.02em;
+  }
+
+  /* Contacts: become 1 column stacked */
+  .page > dl:first-of-type{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .page > dl:first-of-type dt,
+  .page > dl:first-of-type dd{
+    justify-self: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  /* Experience row: stack */
+  .page h2 + dl,
+  .page h2 + hr + dl{
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-bottom: 10px;
+  }
+
+  .page h2 + dl dt,
+  .page h2 + hr + dl dt{
+    font-weight: 800;
+  }
+
+  .page h2 + dl dd:nth-of-type(1),
+  .page h2 + hr + dl dd:nth-of-type(1),
+  .page h2 + dl dd:nth-of-type(2),
+  .page h2 + hr + dl dd:nth-of-type(2){
+    justify-self: start;
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+/* ===== Print ===== */
+
+@media print{
+  body{
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .page{
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .footer{ display:none; }
+
+  a{ border-bottom: 0; }
 }
