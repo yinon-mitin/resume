@@ -72,9 +72,9 @@ body{
 
 /* Subtitle / tagline under name */
 .page h6{
-  font-size: 1.05em;
+  font-size: 1.00em;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-align: center;
   margin: 0 0 12px 0;
   color: #111;
