@@ -1,6 +1,6 @@
-/* Resume CSS for GitHub Pages (adapted from junian backbone CSS) */
+/* Resume CSS for GitHub Pages (full updated) */
 
-/* ===== Base / Page ===== */
+/* ===== Base / Variables ===== */
 
 :root{
   --page-w: 900px;
@@ -67,13 +67,17 @@ body{
   letter-spacing: 0.1em;
   text-align: center;
   margin: 0 0 0.15em 0;
+  color: var(--accent); /* accent applied */
 }
 
+/* Subtitle / tagline under name */
 .page h6{
-  font-size: 1em;
-  letter-spacing: 0.1em;
+  font-size: 1.05em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-align: center;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 12px 0;
+  color: #111;
 }
 
 .page h2,
@@ -82,11 +86,16 @@ body{
   font-size: 1.2em;
 }
 
-/* Section headings (like junian) */
+/* Section headings (like reference) */
 .page h2{
   color: var(--accent);
   border-bottom: 1px solid var(--rule);
   padding-bottom: 2px;
+}
+
+/* Optional: keep h3 neutral unless you want accent too */
+.page h3{
+  color: #111;
 }
 
 /* ===== Lists ===== */
@@ -113,64 +122,84 @@ body{
 /* Expected structure: <dl><dt>email</dt><dd>linkedin</dd><dd>location</dd></dl> */
 .page > dl:first-of-type{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
   align-items: center;
   width: 100%;
-  margin: 0 0 2px 0;
-  gap: 8px;
+  margin: 0 0 10px 0;
+  gap: 8px 12px;
 }
 
 .page > dl:first-of-type dt,
 .page > dl:first-of-type dd{
+  min-width: 0;
   white-space: nowrap;
 }
 
+/* email (dt) */
 .page > dl:first-of-type dt{
   text-align: left;
   justify-self: start;
 }
 
+/* linkedin (dd #1) */
 .page > dl:first-of-type dd:nth-of-type(1){
   text-align: center;
   justify-self: center;
 }
 
+/* location (dd #2) */
 .page > dl:first-of-type dd:nth-of-type(2){
   text-align: right;
   justify-self: end;
 }
 
-/* ===== Experience row: Role | Company | Dates ===== */
-/* Applies to the dl that comes right after the "Experience" h2.
-   Also keeps compatibility if you have an <hr> between. */
-.page h2 + dl,
-.page h2 + hr + dl{
+/* Accent links in header (as in reference) */
+.page > dl:first-of-type a{
+  color: var(--accent);
+  border-bottom-color: rgba(55, 123, 181, .35);
+}
+.page > dl:first-of-type a:hover{
+  border-bottom-color: rgba(55, 123, 181, .8);
+}
+
+/* ===== Experience/Project row: Role | Company | Dates ===== */
+/* Most robust selector: a dl that is immediately followed by a bullet list */
+.page dl:has(+ ul){
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
   align-items: baseline;
   width: 100%;
   margin: 0 0 6px 0;
-  gap: 8px;
+  gap: 8px 12px;
 }
 
-.page h2 + dl dt,
-.page h2 + hr + dl dt{
+.page dl:has(+ ul) dt{
   text-align: left;
   justify-self: start;
-  font-weight: 700;
+  font-weight: 800;
+  min-width: 0;
 }
 
-.page h2 + dl dd:nth-of-type(1),
-.page h2 + hr + dl dd:nth-of-type(1){
+.page dl:has(+ ul) dd{
+  min-width: 0;
+}
+
+/* company */
+.page dl:has(+ ul) dd:nth-of-type(1){
   text-align: center;
   justify-self: center;
 }
 
-.page h2 + dl dd:nth-of-type(2),
-.page h2 + hr + dl dd:nth-of-type(2){
+/* dates */
+.page dl:has(+ ul) dd:nth-of-type(2){
   text-align: right;
   justify-self: end;
   white-space: nowrap;
+}
+
+/* Keep the bullets close to the row */
+.page dl + ul{
+  margin-top: 0.2em;
 }
 
 /* ===== Icons / Images ===== */
@@ -183,7 +212,7 @@ body{
   max-width: 100%;
 }
 
-/* ===== Footer button (если ты добавляешь "Download PDF") ===== */
+/* ===== Footer button (optional) ===== */
 
 .footer{
   margin-top: 18px;
@@ -221,13 +250,19 @@ body{
     letter-spacing: 0.02em;
   }
 
-  /* Contacts: become 1 column stacked */
+  .page h6{
+    font-size: 1.0em;
+    letter-spacing: 0.10em;
+  }
+
+  /* Contacts: stack neatly */
   .page > dl:first-of-type{
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
     margin-bottom: 8px;
   }
+
   .page > dl:first-of-type dt,
   .page > dl:first-of-type dd{
     justify-self: center;
@@ -236,23 +271,15 @@ body{
     text-align: center;
   }
 
-  /* Experience row: stack */
-  .page h2 + dl,
-  .page h2 + hr + dl{
+  /* Experience/Project row: stack */
+  .page dl:has(+ ul){
     grid-template-columns: 1fr;
     gap: 2px;
     margin-bottom: 10px;
   }
 
-  .page h2 + dl dt,
-  .page h2 + hr + dl dt{
-    font-weight: 800;
-  }
-
-  .page h2 + dl dd:nth-of-type(1),
-  .page h2 + hr + dl dd:nth-of-type(1),
-  .page h2 + dl dd:nth-of-type(2),
-  .page h2 + hr + dl dd:nth-of-type(2){
+  .page dl:has(+ ul) dd:nth-of-type(1),
+  .page dl:has(+ ul) dd:nth-of-type(2){
     justify-self: start;
     text-align: left;
     white-space: normal;
