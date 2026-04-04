@@ -22,7 +22,7 @@ Interested in infrastructure operations, Linux administration, network services,
 
 **Automation Engineer**
 : Padani Jewelers (E-commerce)
-: 2022-2026
+: 2022–2026
 
 - Led automation for a Magento-to-Shopify **migration**, designing data flows and batch processing routines that reduced large catalog deployment time by approx. **60%**.
 
@@ -90,4 +90,6 @@ Interested in infrastructure operations, Linux administration, network services,
 
 ## Languages
 
-English - C1 | Russian - Native | Hebrew - A2
+- English - C1
+- Russian - Native
+- Hebrew - A2
