@@ -8,8 +8,8 @@ layout: resume
 ###### **Linux | Docker | Networking | VPN | DNS | Observability | CI/CD**
 
 <span class="iconify" data-icon="tabler:mail"></span> [yinon.mitin@gmail.com](mailto:yinon.mitin@gmail.com)
-	: <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
-	: <span class="iconify" data-icon="ic:outline-location-on"></span> [Location: Tel-Aviv, IL](https://maps.app.goo.gl/B1f5wTWCMaAr6LuGA)
+: <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
+: <span class="iconify" data-icon="ic:outline-location-on"></span> [Location: Tel-Aviv, IL](https://maps.app.goo.gl/B1f5wTWCMaAr6LuGA)
 
 ## Summary
 
