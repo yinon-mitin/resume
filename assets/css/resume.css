@@ -233,6 +233,28 @@ body{
   page-break-after: always;
 }
 
+/* ===== Languages: inline with vertical separators ===== */
+.page h2#languages + ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0.2em 0 0.8em 0;
+
+  display: flex;
+  flex-wrap: wrap;          /* чтобы не ломалось на узких экранах */
+  gap: 0;                   /* разделители будут псевдоэлементом */
+}
+
+.page h2#languages + ul > li{
+  margin: 0;
+  padding: 0;
+}
+
+.page h2#languages + ul > li:not(:last-child)::after{
+  content: " | ";
+  opacity: .8;
+  margin: 0 10px;
+}
+
 /* ===== Mobile ===== */
 
 @media (max-width: 600px){
@@ -284,28 +306,6 @@ body{
     text-align: left;
     white-space: normal;
   }
-}
-
-/* ===== Languages: inline with vertical separators ===== */
-.page h2#languages + ul{
-  list-style: none;
-  padding-left: 0;
-  margin: 0.2em 0 0.8em 0;
-
-  display: flex;
-  flex-wrap: wrap;          /* чтобы не ломалось на узких экранах */
-  gap: 0;                   /* разделители будут псевдоэлементом */
-}
-
-.page h2#languages + ul > li{
-  margin: 0;
-  padding: 0;
-}
-
-.page h2#languages + ul > li:not(:last-child)::after{
-  content: " | ";
-  opacity: .8;
-  margin: 0 10px;
 }
 
 /* ===== Print ===== */
