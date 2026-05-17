@@ -1,4 +1,4 @@
-# Yinon Mitin - Infrastracture & Networking DevOps Engineer
+# Yinon Mitin - Infrastracture & Networking Engineer
 ---
 Hosting resume web-page on GitHub Pages
 
