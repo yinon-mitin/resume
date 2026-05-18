@@ -21,7 +21,7 @@ layout: resume
 
 DevOps Engineer
   : Padani Jewelers - E-commerce
-  : 2022-Present
+  : 2020-2024
 
 - Led automation for a large-scale **Magento-to-Shopify migration**, designing repeatable data flows, batch processing routines, validation steps, and operational handoff processes that **reduced large catalog deployment time by approx. 60%**.
 
@@ -39,10 +39,10 @@ DevOps Engineer
 
 - Improved operational troubleshooting by standardizing logs, dashboards, **failure detection** points, and repeatable recovery procedures for automation and infrastructure workloads.
 
-
-## Independent Infrastructure & Platform Projects
-
-### Distributed VPN / Secure Connectivity Platform
+##
+Infrastructure Engineer & SRE
+  : NDA
+  : 2024-Present
 
 - Designed and built a **commercial VPN/connectivity platform** from scratch for **thousands of users**, high traffic throughput, **distributed ingress/egress** points, **load-balanced routing**, autoscaling, and **24/7 operation**.
 
@@ -63,6 +63,8 @@ DevOps Engineer
 - Owns the platform end-to-end as a **commercial infrastructure product**, with uptime, security posture, customer impact, cost efficiency, automation quality, and reliability treated as core engineering requirements.
 
 <div class="pagebreak" />
+
+## Independent Infrastructure & Platform Projects
 
 ### HomeLab / Private Infrastructure Platform
 
