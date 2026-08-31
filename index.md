@@ -6,7 +6,7 @@ layout: resume
 
 # Yinon Mitin
 
-##### Platform / Infrastructure Engineer | Linux | AWS | Terraform | Kubernetes | Automation | Observability
+##### Site Reliability Engineer | Kubernetes | AWS | Terraform | Observability | Linux | Networking
 
 <span class="iconify" data-icon="tabler:mail"></span> [yinon.mitin@gmail.com](mailto:yinon.mitin@gmail.com)
   : <span class="iconify" data-icon="tabler:brand-linkedin"></span> [linkedin.com/in/yinon-mitin](https://linkedin.com/in/yinon-mitin)
@@ -14,7 +14,7 @@ layout: resume
 
 ## Summary
 
-**Platform / Infrastructure Engineer** with commercial e-commerce automation experience and hands-on work across Linux, AWS, Terraform, Kubernetes, CI/CD, observability, and networking. Designs repeatable systems that reduce manual operations and operational risk—from ETL and data workflows to infrastructure validation, monitoring, and recovery. Building Phoenix, an independent production-oriented infrastructure foundation for a future connectivity service, with explicit security, recovery, and rollout gates.
+**Platform** and **Site Reliability Engineer** focused on **production infrastructure**, Linux, Kubernetes, cloud platforms, networking, **automation**, and observability. Builds and maintains **CI/CD pipelines**, **Terraform** and **Helm** infrastructure workflows, **monitoring** and **alerting systems**, secure access controls, backup/recovery procedures, and operational automation for business-critical environments. Combines commercial e-commerce infrastructure experience with ownership of distributed connectivity systems, applying SRE, DevSecOps, and platform engineering practices across reliability, **scalability**, security, and runtime operations.
 
 
 ## Professional Experience
@@ -39,23 +39,34 @@ DevOps Engineer
 
 - Improved operational troubleshooting by standardizing logs, dashboards, **failure detection** points, and repeatable recovery procedures for automation and infrastructure workloads.
 
+##
+Infrastructure Engineer & SRE
+  : NDA
+  : 2024-Present
+
+- Designed and built a **commercial VPN/connectivity platform** from scratch for **thousands of users**, high traffic throughput, **distributed ingress/egress** points, **load-balanced routing**, autoscaling, and **24/7 operation**.
+
+- Defined the full topology with **isolated Linux nodes** for protocol termination, traffic routing, control-plane services, observability, log aggregation, backups, and administrative access.
+
+- Implemented multi-protocol support across **WireGuard, OpenVPN, VLESS, Xray-based stacks**, and related tunneling technologies to serve heterogeneous clients, routing constraints, censorship-resistance scenarios, and protocol redundancy.
+
+- Built resilient traffic paths using **load balancers**, reverse proxies, **firewall** boundaries, **DNS** controls, secure management channels, and service isolation to enforce **defense-in-depth** across production nodes.
+
+- Implemented **metrics, structured logs, uptime checks, dashboards, and alerting**; telemetry is transported through encrypted tunnels instead of exposed public management endpoints.
+
+- Built a **Telegram-based commercial and administrative control plane** for onboarding, subscription payments, access provisioning, operational notifications, and customer-facing automation.
+
+- Designed a dedicated data-protection layer with separate log and backup nodes, **encrypted backup workflows**, external replicas, recovery procedures, and failure-isolation boundaries.
+
+- Applied **DevSecOps/SRE practices** across access control, SSH hardening, firewall policy, secrets hygiene, patching, health checks, incident feedback, capacity planning, and repeatable recovery.
+
+- Owns the platform end-to-end as a **commercial infrastructure product**, with uptime, security posture, customer impact, cost efficiency, automation quality, and reliability treated as core engineering requirements.
+
+<div class="pagebreak" />
+
 ## Independent Infrastructure & Platform Projects
 
-### Phoenix — Production-Oriented Infrastructure Foundation
-
-**Independent project** · 2024-Present
-
-- Building a production-oriented infrastructure foundation for a future connectivity service, using lab-first validation to prove security, recovery, and operational controls before rollout.
-
-- Designed a gated delivery model covering staged SSH, supply-chain pinning, overlay networking, secrets boundaries, observability, and disaster recovery.
-
-- Built idempotent **Ansible** and **Python** workflows with private runtime contracts, validation gates, and explicit separation between local, substitute, and production evidence.
-
-- Locally validated a four-node Debian topology with staged admission, WireGuard overlay networking, encrypted backups, and recovery experiments; defined clear gate criteria before production deployment.
-
-### Private Infrastructure Platform
-
-**Independent project** · Ongoing
+### HomeLab / Private Infrastructure Platform
 
 - Built and currently operates an **enterprise-grade private infrastructure** environment with **multiple routers, managed switches, servers**, segmented networks, self-hosted services, **private DNS**, **firewall policy**, and controlled remote access.
 
