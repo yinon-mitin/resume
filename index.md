@@ -11,11 +11,11 @@ Israel · yinon.mitin@gmail.com · [GitHub](https://github.com/yinon-mitin) · [
 
 ## Summary
 
-Infrastructure Automation Engineer focused on Linux platforms, networking and reliable, repeatable operations. Brings four years of experience supporting retail IT and e-commerce systems, including an independently delivered Python automation project, alongside substantial infrastructure and platform work. Architected role-separated VPN infrastructure, automated complete cloud application lifecycles and built reproducible self-hosted systems with private networking, observability and validated recovery. Approaches infrastructure as an engineered product, emphasizing clear service boundaries, security, maintainability and minimal manual intervention. Seeking a remote Infrastructure Automation or Platform Engineering role within a collaborative team, with ownership of meaningful technical problems and room to improve how systems are built and operated.
+Infrastructure Automation Engineer focused on Linux platforms, networking and reliable, repeatable operations. Brings nearly four years of experience supporting retail IT and e-commerce systems, including an independently delivered Python automation project, alongside substantial infrastructure and platform work. Architected role-separated VPN infrastructure, automated complete cloud application lifecycles and built reproducible self-hosted systems with private networking, observability and validated recovery. Approaches infrastructure as an engineered product, emphasizing clear service boundaries, security, maintainability and minimal manual intervention. Seeking a remote Infrastructure Automation or Platform Engineering role within a collaborative team, with ownership of meaningful technical problems and room to improve how systems are built and operated.
 
 ## Professional Experience
 
-### Padani Jewelers — E-commerce Systems & Automation Specialist | 2022–2026
+### Padani Jewelers — E-commerce Systems & Automation Specialist | Sep 2022–Apr 2026
 
 - **Retail IT operations and troubleshooting:** Configured and supported workstations, user access, POS systems, peripherals and network connectivity across retail locations.
 - **Python workflow automation:** Automated repetitive e-commerce data, file and image-processing workflows.
